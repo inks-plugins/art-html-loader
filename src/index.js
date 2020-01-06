@@ -2,7 +2,7 @@ const path = require('path')
 const template = require('art-template')
 const loaderUtils = require('loader-utils')
 const selfOptions = {
-  root: path.join('src'),
+  root: process.cwd() + '/src/',
   extname: '.art',
   debug: process.env.NODE_ENV !== 'production'
 }

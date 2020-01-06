@@ -78,3 +78,17 @@ module.exports = {
 ```
 
 > 特别提醒：.arthtml文件主要用于需要将文件生成单独的html文件所用，其需要引用的组件部分，仍应为.art文件，详细可以参考test文件中的component内容。
+
+> 这里要注意，在引用组件的时候，因为``art options``配置项会有一个``root``的配置，这里默认是``src``目录，因此在引用组件的时候``'./'``及代表``root``配置的目录，而静态资源如图片等是``file-loader``编译的，则需要根据其文件相对目录去引用。
+如文件目录为：
+- views
+  - index.arthtml
+- assets
+  - test.jpg
+- component
+  - header.art
+那在引用test.jpg与组件header.art时应为：
+```
+{{include './component/header.art' data}}
+<img src="../assets/test.jpg" />
+```
