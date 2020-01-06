@@ -1,0 +1,24 @@
+<template>
+  {{extend './component/_layout.art'}}
+  {{block 'title'}}测试页{{/block}}
+  {{block 'content'}}
+  <div class="jumbotron diy_con">
+    {{testData}}
+    <img src="./assets/images/wbt.jpg" alt="WebsiteBuilderTools" />
+  </div>
+  {{/block}}
+</template>
+
+<script>
+  return {
+    importData: './data',
+    data: {
+      testData: '这里是测试页内容'
+    },
+    main: function (windows) {
+      var d = document.createElement('div')
+      d.innerHTML = '测试js'
+      document.body.appendChild(d)
+    }
+  }
+</script>

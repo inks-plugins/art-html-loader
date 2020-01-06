@@ -1,0 +1,36 @@
+{
+  "name": "art-html-loader",
+  "version": "0.1.0",
+  "description": "art-html-loader是一个webpack loader，用于art-templete模板文件的编译。",
+  "main": "lib/index.js",
+  "files": ["lib"],
+  "scripts": {
+    "test": "webpack --config config/webpack.test.js",
+    "build": "webpack --config config/webpack.prod.js"
+  },
+  "author": "YanEr",
+  "license": "ISC",
+  "dependencies": {
+    "art-template": "^4.13.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "extract-loader": "^3.1.0",
+    "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "keywords": [],
+  "homepage": "https://github.com/qc-web-y/art-html-loader",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qc-web-y/art-html-loader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qc-web-y/art-html-loader/issues"
+  }
+}

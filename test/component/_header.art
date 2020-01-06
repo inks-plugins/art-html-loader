@@ -1,0 +1,4 @@
+<header>
+  <div>{{site.name}}</div>
+  <div>{{site.version}}</div>
+</header>
