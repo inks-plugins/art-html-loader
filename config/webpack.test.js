@@ -46,7 +46,7 @@ module.exports = {
             }
           },
           {
-            loader: require.resolve('../lib/index.js'),
+            loader: require.resolve('../src/index.js'),
             options: {
               root: path.resolve('./test')
             }

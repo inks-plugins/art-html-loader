@@ -1,6 +1,6 @@
 {
   "name": "art-html-loader",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "art-html-loader是一个webpack loader，用于art-templete模板文件的编译。",
   "main": "lib/index.js",
   "files": ["lib"],

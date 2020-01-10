@@ -14,6 +14,14 @@ const loadersApi = function (source) {
   const loaderoptions = loaderUtils.getOptions(this) || {}
   options = Object.assign({}, selfOptions, loaderoptions)
 
+  // 将依赖组件添加进入
+  let dependComponent = source.match(/\'(\S*?\.art)\'/g)
+  dependComponent.map(c => {
+    c = /\'(\S*?\.art)\'/.exec(c)[1]
+    cPath = path.join(options.root, c)
+    this.addDependency(cPath)
+  })
+
   // 获取art模板
   let artTpl = /<template>([\S\s]*)<\/template>/.exec(source)
   if (artTpl && artTpl.length >= 2) artTpl = artTpl[1]

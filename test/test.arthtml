@@ -5,6 +5,7 @@
   <div class="jumbotron diy_con">
     {{testData}}
     <img src="./assets/images/wbt.jpg" alt="WebsiteBuilderTools" />
+    {{include './component/_footer.art' navData}}
   </div>
   {{/block}}
 </template>
