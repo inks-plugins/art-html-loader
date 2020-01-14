@@ -11,12 +11,16 @@
 </template>
 
 <script>
+  // 最终编译结果，可以参考test_dist文件内容
+  const header = './component/_header.art'
+
   return {
-    importData: './data',
-    data: {
+    artHot: header, // 开发模式下，当组件'./component/_header.art'发生改变时，会进行实时热更新
+    importData: './data', // 引入data数据
+    data: { // 该页面下的数据，将与‘importData’引入的数据合并，作为当前模板的数据
       testData: '这里是测试页内容'
     },
-    main: function (windows) {
+    main: function (windows) { // 该页面的js，打包时会自动将该js注入到body的script标签中
       var d = document.createElement('div')
       d.innerHTML = '测试js'
       document.body.appendChild(d)
